@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='../static/form.js')}}"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+        <div class="container">
+            <br><br><br><br>
+            <form action="" >
+                <div class="form-group">
+                    <label for="emailInput">Email Address : </label>
+                    <input type="email" name="" class="form-control" id="emailInput" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="usernameInput">Username : </label>
+                    <p class="alert alert-info"> Take note : Username must contain lowercase character,number and 
+                        it has minimimum of 8 and maximum of 18
+                    </p>
+                    <input type="text" class="form-control" id="userInput" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput">Password : </label>
+                    <p class="alert alert-info">Take note : Password must contain uppercase and lowercase character,number ,symbol and
+                        it has minimimum of 8 and maximum of 18
+                    </p>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Enter your password" required>
+                </div>
+
+                <input type="submit" class="btn btn-success" value="Submit">
+            </form>
+        </div>
+        <br>
+        <div class="container">
+            <div id="successAlert" class="alert alert-success" role="alert" style="display:none"></div>
+            <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none"></div>
+        </div>
+        
+</body>
+</html>
